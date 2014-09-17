@@ -29,6 +29,22 @@ void destroyAnimal(Animal a)
 	free(a);
 }
 
+int equalsAnimal(Animal a1, Animal a2)
+{
+
+	if((strcmp(a1->_name_, a2->_name_))!=0)
+		return 0;
+
+	if(a1->_age_ == a2->_age_)
+		return 0;
+
+	if(a1->_weight_ == a2->_weight_)
+		return 0;
+
+return 1;
+}
+
+
 
 
 
