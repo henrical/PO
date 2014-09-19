@@ -1,4 +1,5 @@
 import static java.lang.System.out;
+import java.lang.Math;
 
 public class Cat extends Animal
 {
@@ -14,6 +15,11 @@ public class Cat extends Animal
 		this.energy = 500;
 	}
 	//====================Instance Methods======================
+	public void sleep()
+	{
+		this.energy = 500;
+	}
+
 	@Override	
 	public String toString()
 	{
@@ -27,13 +33,34 @@ public class Cat extends Animal
 
 	public void eat(Rat rat)
 	{
-		this.energy += rat.getEnergy();
-		rat.energy = 0;
+		this.run();
+		
+		if(Math.random() <= (double) 0.2)
+			{			
+			this.energy += rat.getEnergy();
+			rat.energy = 0;
+			}
+
+		else 	{
+			rat.run();
+			rat.energy += 5;
+			}
 	}
 
 	public void eat(Bird bird)
 	{
-		this.energy += bird.getEnergy();
-		bird.energy = 0;
+		this.run();
+		
+		if(Math.random() <= (double) 0.1)
+			{			
+			this.energy += bird.getEnergy();
+			bird.energy = 0;
+			}
+
+		else 	{
+			bird.run();
+			bird.energy += 5;
+			}
+
 	}
 }

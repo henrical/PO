@@ -22,5 +22,9 @@ public class Bird extends Animal
 		this.energy -= 2;
 	}
 
+	public void sleep()
+	{
+		this.energy = 20;
+	}
 
 }

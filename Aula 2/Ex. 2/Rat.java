@@ -12,6 +12,11 @@ public class Rat extends Animal
 		this.energy = 50;
 	}
 	//====================Instance Methods======================
+	public void sleep()
+	{
+		this.energy = 50;
+	}
+
 	public void run()
 	{
 		this.energy -= 2;

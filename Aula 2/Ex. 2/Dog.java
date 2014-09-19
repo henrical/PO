@@ -14,6 +14,11 @@ public class Dog extends Animal
 		this.energy = 1000;
 	}
 	//====================Instance Methods======================
+	public void sleep()
+	{
+		this.energy = 1000;
+	}
+	
 	@Override	
 	public String toString()
 	{
@@ -25,15 +30,26 @@ public class Dog extends Animal
 		this.energy -= 50;
 	}
 
-	public void eat(Rat rat)
-	{
-		this.energy += rat.getEnergy();
-		rat.energy = 0;
-	}
 
 	public void attack(Cat cat)
 	{
 		this.energy -= 100;
 		cat.energy -= 25;
+	}
+
+	public void eat(Rat rat)
+	{
+		this.run();
+		
+		if(Math.random() <= (double) 0.04)
+			{			
+			this.energy += rat.getEnergy();
+			rat.energy = 0;
+			}
+
+		else 	{
+			rat.run();
+			rat.energy += 5;
+			}
 	}
 }
