@@ -17,6 +17,23 @@ public class Cat extends Animal
 	@Override	
 	public String toString()
 	{
-		return "Name: "+ this.name + ".\nEnergy: " + this.energy + ".";
+		return "Name: "+ this.name + ".\nEnergy: " + this.energy + ".\n";
+	}
+	
+	public void run()
+	{
+		this.energy -= 25;
+	}
+
+	public void eat(Rat rat)
+	{
+		this.energy += rat.getEnergy();
+		rat.energy = 0;
+	}
+
+	public void eat(Bird bird)
+	{
+		this.energy += bird.getEnergy();
+		bird.energy = 0;
 	}
 }

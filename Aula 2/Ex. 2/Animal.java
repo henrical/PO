@@ -22,7 +22,8 @@ public class Animal
 	//====================Instance Methods======================
 	public String toString()
 	{
-		return "Energy: " + this.energy + ".";
+		return "Energy: " + this.energy + ".\n";
 	}
 
+	
 }

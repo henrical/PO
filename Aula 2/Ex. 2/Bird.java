@@ -12,5 +12,15 @@ public class Bird extends Animal
 		this.energy = 20;
 	}
 	//====================Instance Methods======================
+	public void run()
+	{
+		this.energy -= 5;
+	}
+
+	public void fly()
+	{
+		this.energy -= 2;
+	}
+
 
 }
