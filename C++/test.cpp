@@ -4,7 +4,25 @@ using namespace std;
 
 class TestClass 
 {	
-	public:
+	private:
+		string name;
+
+	public :
+		TestClass(string str)
+		{
+			name = str;
+		}
+		
+		void setName(string str)
+		{
+			name = str;
+		}
+
+		string getName()
+		{
+			return name;
+		}
+		
 		static void sleep()
 		{
 			cout <<"This class is sleeping" <<endl;
@@ -18,12 +36,12 @@ int main()
 	int b;
 	int sum;
 
-	/*TestClass testObject;
-
-	testObject.sleep();*/
+	TestClass testObject("fuckerton");
+	
+	cout <<"This object is named " << testObject.getName() << "." <<endl;
 
 	TestClass::sleep();
-
+	/*
 	cout <<"Enter a number boss!" <<endl;
 	cin >> a;
 
@@ -37,6 +55,7 @@ int main()
 		cout <<"The result is : " << sum <<endl;
 	else
 		cout <<"The result " << sum << " is less than 3;" << endl;
+	*/
 
 	return 0;
 }
