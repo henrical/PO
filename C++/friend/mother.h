@@ -7,7 +7,7 @@ class Mother
 {
 	public:	
 		Mother(int a, std::string n);
-		void setChildName(Child &c, std::string n);
+		void setChildName(Child &c, std::string n); //aqui
 	private:
 		std::string name;
 		int age;

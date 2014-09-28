@@ -1,0 +1,5 @@
+Contains examples of:
+	-Composition(a class inside another class);
+	-Out of directory import (of Birthday class);
+	-Usage of friend keyword;
+	-Passing reference to an object in order to alter ir permanently;

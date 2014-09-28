@@ -3,7 +3,8 @@
 
 #include "child.h"
 
-Child::Child(int a, std::string n)
+Child::Child(int a, std::string n, Birthday b)
+:dateOfBirth(b)
 {
 	age = a;
 	name = n;	
@@ -24,6 +25,8 @@ std::string Child::printChild()
 	stream << age;
 	stream << "\nName = ";
 	stream << name;
+	stream << "\nDate = ";
+	stream << dateOfBirth.getFormattedDate();
 	stream << std::endl;
 
 	result = stream.str();

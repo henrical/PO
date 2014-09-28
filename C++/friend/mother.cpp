@@ -8,7 +8,7 @@ Mother::Mother( int a, std::string n)
 	age = a;
 }
 
-void Mother::setChildName(Child &c, std::string n)
+void Mother::setChildName(Child &c, std::string n) //aqui
 {
 	c.setName(n);
 }
