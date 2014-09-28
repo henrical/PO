@@ -15,7 +15,6 @@ std::string Birthday::getFormattedDate()
 	std::stringstream stream;
 	std::string result;
 
-	stream << "Birth date: ";
 	stream << day ;
 	stream << "/";
 	stream << month;

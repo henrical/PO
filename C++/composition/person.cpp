@@ -11,6 +11,6 @@ Person::Person(std::string n, Birthday b)
 
 void Person::printInfo()
 {
-	std::cout << "Person Info\n Name: " << name << "\nDate of birth: " << dateOfBirth.getFormattedDate() << "." <<std::endl;
+	std::cout << "Person Info:\nName: " << name << "\nDate of birth: " << dateOfBirth.getFormattedDate() << "." <<std::endl;
 
 }
