@@ -1,7 +1,11 @@
 #ifndef ANDGATE2_H
 #define ANDGATE2_H
-
 #include <sstream>
+
+namespace AG
+{
+
+
 
 class AndGate2
 {
@@ -22,5 +26,6 @@ class AndGate2
 		bool valueA;
 		bool valueB;
 };
+}
 
 #endif

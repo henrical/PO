@@ -2,6 +2,7 @@
 
 #include "AndBinario.h"
 
+
 int main()
 {
 	AndGate2 ag(true, false);

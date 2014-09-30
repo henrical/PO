@@ -2,6 +2,7 @@
 
 #include "AndBinario.h"
 
+
 AndGate2::AndGate2()
 {
 
@@ -91,6 +92,7 @@ bool AndGate2::operator==(AndGate2 a) //overriding of operator ==
 	else 
 		return false;
 }
+
 
 
 
