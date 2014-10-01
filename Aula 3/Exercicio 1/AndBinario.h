@@ -2,13 +2,11 @@
 #define ANDGATE2_H
 #include <sstream>
 
-namespace AG
-{
-
-
 
 class AndGate2
 {
+	//friend class AndGate3;	
+
 	public:
 		AndGate2();
 		AndGate2(bool a);
@@ -26,6 +24,7 @@ class AndGate2
 		bool valueA;
 		bool valueB;
 };
-}
+
+
 
 #endif
