@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 
+//Henrique Caldeira, numero 75838
+
 //class Animal ============================
 class Animal
 {
