@@ -1,4 +1,4 @@
-package arabiannights;
+//package arabiannights;
 
 public class GrumpyGenie extends MagicalEntity
 {

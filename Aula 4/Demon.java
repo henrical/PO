@@ -1,4 +1,4 @@
-package arabiannights;
+//package arabiannights;
 
 public class Demon extends MagicalEntity
 {

@@ -1,4 +1,4 @@
-package arabiannights;
+//package arabiannights;
 
 public class MagicLamp
 {	
@@ -14,7 +14,7 @@ public class MagicLamp
 		this.initGenies = a;
 	}
 
-	public boolean equals(MagicLamp m)
+	public boolean equals(final MagicLamp m)
 	{
 		return (initGenies == m.initGenies) 
 			&& (getDemons() == m.getDemons()) 
@@ -58,7 +58,7 @@ public class MagicLamp
 
 
 
-	public void feedDemon(Demon d)
+	public void feedDemon(final Demon d)
 	{
 		this.genies = initGenies;
 		this.demons++;
