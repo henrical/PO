@@ -41,6 +41,8 @@ bool Animal::operator==(const Animal &a) //overriding of operator ==
 {
 	return (age==a.age) && (name==a.name);
 }
+//end of Animal methods ===================
+
 
 std::ostream &operator<<(std::ostream &o, const Animal &a)
 {
@@ -53,7 +55,7 @@ std::ostream &operator<<(std::ostream &o, const Animal &a)
 	return o;
 
 }
-//end of Animal methods ===================
+
 
 
 
@@ -87,6 +89,8 @@ bool Dog::operator==(const Dog &d) //overriding of operator ==
 {
 	return (Animal::operator==(d)) && (weight==d.weight); //usa a funçao de Animal para comparar os dois primeiros atributos e depois faz And com o resultado da comparaçao do 3º atributo
 }
+//end of Dog methods ======================
+
 
 std::ostream &operator<<(std::ostream &o, const Dog &d)
 {
@@ -96,7 +100,7 @@ std::ostream &operator<<(std::ostream &o, const Dog &d)
 	o << std::endl;
 	return o; 
 }
-//end of Dog methods ======================
+
 
 
 
@@ -130,6 +134,8 @@ bool Cat::operator==(const Cat &c) //overriding of operator ==
 {
 	return (Animal::operator==(c)) && (numLives==c.numLives); 
 }
+//end of Cat methods ======================
+
 
 std::ostream &operator<<(std::ostream &o, const Cat &c)
 {
@@ -139,7 +145,7 @@ std::ostream &operator<<(std::ostream &o, const Cat &c)
 	o << std::endl;
 	return o; 
 }
-//end of Cat methods ======================
+
 
 
 
