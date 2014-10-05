@@ -16,7 +16,9 @@ public class MagicLamp
 
 	public boolean equals(MagicLamp m)
 	{
-		return (initGenies == m.initGenies) && (getDemons() == m.getDemons()) && (getGenies() == m.getGenies());
+		return (initGenies == m.initGenies) 
+			&& (getDemons() == m.getDemons()) 
+			&& (getGenies() == m.getGenies());
 	}
 
 	public int getTimesRubbed()
@@ -35,29 +37,32 @@ public class MagicLamp
 	}	
 
 
-	public MagicalEntity rub()
+	public MagicalEntity rub(int x)
 	{
 		if(genies==0)
 		{
-			Demon d = new Demon();
+			Demon d = new Demon(x);
 			return d;
 		} 
 		else if(timesRubbed%2==0) 
 		{
-			Genie g = new Genie();
+			GrumpyGenie g = new GrumpyGenie(x);
 			return g;
 		}
 		else  
 		{
-			Genie g = new Genie();
+			FriendlyGenie g = new FriendlyGenie(x);
 			return g;
 		}			
 	}
+
 
 
 	public void feedDemon(Demon d)
 	{
 		this.genies = initGenies;
 		this.demons++;
+
+		d.hasBeenRecycled = true;
 	}
 }
