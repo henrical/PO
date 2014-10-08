@@ -2,9 +2,10 @@
 #define ECONOMICENGINE_H
 
 class EconomicEngine{
-	private: 
-		bool isOn;
+		
 	public:
+		bool isOn;
+
 		EconomicEngine();
 		void turnOn();
 		void turnOff();

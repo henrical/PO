@@ -3,9 +3,11 @@
 #include "EconomicEngine.h"
 
 EconomicEngine::EconomicEngine()
+//:isOn(false)
 {
-	isOn = false;
+	isOn=false;
 }
+
 
 void EconomicEngine::turnOn()
 {

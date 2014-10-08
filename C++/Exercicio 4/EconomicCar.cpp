@@ -7,6 +7,8 @@ EconomicCar::EconomicCar(EconomicEngine x)
 {
 }
 
+EconomicCar::EconomicCar(){} // --> ??must exist because subclass's constructor calls it??
+
 void EconomicCar::drive()
 {
 	eng.turnOn();

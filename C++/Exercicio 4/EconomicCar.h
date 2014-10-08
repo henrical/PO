@@ -3,12 +3,14 @@
 
 #include "EconomicEngine.h"
 
-class EconomicCar{
-	private: 
-		EconomicEngine eng;
+class EconomicCar{ 
+		
 	public:
+		EconomicEngine eng;
+
+		EconomicCar();
 		EconomicCar(EconomicEngine x);
-		void drive();
-		void stop();
+		virtual void drive();
+		virtual void stop();
 };
 #endif
