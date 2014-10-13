@@ -5,9 +5,10 @@
 EconomicCar::EconomicCar(EconomicEngine x)
 :eng(x)	
 {
+	
 }
 
-EconomicCar::EconomicCar(){} // --> ??must exist because subclass's constructor calls it??
+
 
 void EconomicCar::drive()
 {

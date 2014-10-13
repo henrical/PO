@@ -3,7 +3,6 @@
 #include "EconomicEngine.h"
 
 EconomicEngine::EconomicEngine()
-//:isOn(false)
 {
 	isOn=false;
 }

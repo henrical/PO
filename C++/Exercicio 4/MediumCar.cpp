@@ -8,9 +8,7 @@ MediumCar::MediumCar(EconomicEngine x)
 {
 }
 
-MediumCar::MediumCar()
-{
-}
+
 
 void MediumCar::changeEngine(EconomicEngine x)
 {

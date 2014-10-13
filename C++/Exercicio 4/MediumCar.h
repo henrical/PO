@@ -9,7 +9,6 @@ class MediumCar : public EconomicCar
 	public:
 		MediumCar(EconomicEngine x);
 
-		MediumCar();
 		void changeEngine(EconomicEngine x);
 };
 
