@@ -8,7 +8,7 @@
 
 int main()
 {
-	
+	/*
 	EconomicEngine *eE1 = new EconomicEngine();
 	EconomicEngine *eE2 = new EconomicEngine();
 	EconomicEngine *eE3 = new EconomicEngine();
@@ -21,8 +21,9 @@ int main()
 
 	eC.drive();
 	eC.stop();
-
-	
+*/
+	EconomicEngine eE1;
+	EconomicCar eC(eE1);	
 	
 
 }

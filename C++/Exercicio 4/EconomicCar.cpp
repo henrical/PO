@@ -2,7 +2,7 @@
 
 #include "EconomicCar.h"
 
-EconomicCar::EconomicCar(EconomicEngine x)
+EconomicCar::EconomicCar(EconomicEngine &x)
 :eng(x)	
 {
 	
