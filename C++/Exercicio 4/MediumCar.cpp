@@ -3,7 +3,7 @@
 #include "MediumCar.h"
 
 
-MediumCar::MediumCar(EconomicEngine x)
+MediumCar::MediumCar(EconomicEngine &x)
 :EconomicCar(x)
 {
 }

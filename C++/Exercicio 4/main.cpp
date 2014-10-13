@@ -8,22 +8,20 @@
 
 int main()
 {
-	/*
-	EconomicEngine *eE1 = new EconomicEngine();
-	EconomicEngine *eE2 = new EconomicEngine();
-	EconomicEngine *eE3 = new EconomicEngine();
- 	XtremeEngine *xE1 = new XtremeEngine();
+	EconomicEngine eE1;
+	EconomicEngine eE2;
+	EconomicEngine eE3;
+	XtremeEngine xE1;
 
-
-	EconomicCar eC(*eE1);
-	MediumCar mC(*eE2);
-	TopCar tC(*eE1, *xE1);
+	EconomicCar eC(eE1);
+	MediumCar mC(eE2);
+	TopCar tC(eE3, xE1);
 
 	eC.drive();
 	eC.stop();
-*/
-	EconomicEngine eE1;
-	EconomicCar eC(eE1);	
-	
 
+	mC.changeEngine(eE3);
+        
+	tC.drive();
+	tC.stop();
 }
