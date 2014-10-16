@@ -2,7 +2,7 @@
 
 #include "TopCar.h"
 
-TopCar::TopCar(EconomicEngine &e1, XtremeEngine &e2)
+TopCar::TopCar(const EconomicEngine &e1, const XtremeEngine &e2)
 :MediumCar(e1), secEng(e2)
 {
 }

@@ -8,7 +8,7 @@ class EconomicCar{
 	public:
 		EconomicEngine eng;
 
-		EconomicCar(EconomicEngine &x);
+		EconomicCar(const EconomicEngine &x);
 		virtual void drive();
 		virtual void stop();
 };

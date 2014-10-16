@@ -3,14 +3,14 @@
 #include "MediumCar.h"
 
 
-MediumCar::MediumCar(EconomicEngine &x)
+MediumCar::MediumCar(const EconomicEngine &x)
 :EconomicCar(x)
 {
 }
 
 
 
-void MediumCar::changeEngine(EconomicEngine x)
+void MediumCar::changeEngine(const EconomicEngine &x)
 {
 	eng = x;
 }

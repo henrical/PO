@@ -7,9 +7,9 @@
 class MediumCar : public EconomicCar 
 {
 	public:
-		MediumCar(EconomicEngine &x);
+		MediumCar(const EconomicEngine &x);
 
-		void changeEngine(EconomicEngine x);
+		void changeEngine(const EconomicEngine &x);
 };
 
 #endif

@@ -10,7 +10,7 @@ class TopCar : public MediumCar
 	public:
 		XtremeEngine secEng;
 
-		TopCar(EconomicEngine &e1, XtremeEngine &e2);
+		TopCar(const EconomicEngine &e1, const XtremeEngine &e2);
 
 		void drive();
 		
