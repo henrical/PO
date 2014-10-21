@@ -1,4 +1,3 @@
-#include <iostream>
 #include "table.h"
 #include "square.h"
 #include "sucessor.h"
@@ -9,3 +8,4 @@ int main ()
 	t.print(new Square);
 	t.print(new Successor);
 }
+
