@@ -4,10 +4,7 @@
 class Transform
 {
 	public:
-		Transform();
-		virtual int* transform(int t[])
-		{
-		};
+		virtual void transform(int t[]) = 0;
 };
 
 

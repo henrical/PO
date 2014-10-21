@@ -1,13 +1,13 @@
 #ifndef _SQUARE_H
 #define _SQUARE_H
 
-#include "transform.cpp"
+#include "transform.h"
 
 class Square : public Transform
 {
 	public:
-		Square();
-		//int* transform(int t[]);
+		explicit Square();
+		void transform(int t[]);
 };
 
 #endif

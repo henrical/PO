@@ -1,18 +1,16 @@
+#include <iostream>
 #include "sucessor.h"
-#include <cstdlib>
 
 Successor::Successor(){};
 
-int* Successor::transform(int t[])
+void Successor::transform(int t[])
 {
 	int i=0;
-	int n = sizeof(t);
-	int *res = (int*) malloc(n*sizeof(int));
+	int n = sizeof(t) - 1;
 
 	for(i;i<n;i++)
 	{
-		res[i] += 1;	
+		std::cout << t[i] + 1 << std::endl;	
 	}
 	
-	return res;
 }

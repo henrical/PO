@@ -1,13 +1,13 @@
 #ifndef _SUCCESSOR_H
 #define _SUCCESSOR_H
 
-#include "transform.cpp"
+#include "transform.h"
 
 class Successor : public Transform
 {
 	public:
-		Successor();
-		//int* transform(int t[]);
+		explicit Successor();
+	 	void transform(int t[]);
 };
 
 #endif

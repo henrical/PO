@@ -1,18 +1,16 @@
+#include <iostream>
+
 #include "square.h"
-#include <cstdlib>
 
 Square::Square(){};
 
-int* Square::transform(int t[])
+void Square::transform(int t[])
 {
 	int i=0;
-	int n = sizeof(t);
-	int *res = (int*) malloc(n*sizeof(int));
+	int n = sizeof(t) - 1;
 
 	for(i;i<n;i++)
 	{
-		res[i] *= res[i] ;	
+		std::cout << (t[i] * t[i]) << std::endl;	
 	}
-	
-	return res;
 }

@@ -2,6 +2,7 @@
 #define _TABLE_H
 
 #include "transform.h"
+#include "square.h"
 
 class Table 
 {
@@ -9,7 +10,8 @@ class Table
 		int *table;
 	public:
 		Table(int n);
-		void print(Transform t);
+		void print(Transform *t) const;
+		
 };
 
 #endif
