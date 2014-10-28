@@ -1,9 +1,16 @@
-#ifndef _INDIVIDUAL_H_
-#define _INDIVIDUAL_H_
+#include "individual.h"
 
-class Individual : public RegionMember
+Individual::Individual(int sLevel)
 {
-	
+	setSupportLevel(sLevel);
 }
 
-#endif
+void Individual::distributeFunds(int n)
+{
+	funds += n;
+}
+
+int Individual::getFundsReceived() const
+{
+	return funds;
+}

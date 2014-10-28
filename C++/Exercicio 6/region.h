@@ -7,13 +7,17 @@
 
 class Region : public Beneficiary
 {
-	private:
 		
 	public:
 		RegionMember *memberList;
 
 		explicit Region(int n, int sLevel);
+		~Region();
+		
+
 		void distributeFunds(int n);
+
+		int getFundsReceived() const;
 };
 
 #endif

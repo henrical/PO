@@ -4,8 +4,12 @@
 Region::Region(int n, int sLevel)
 {
 	memberList = (RegionMember*) malloc(sizeof(RegionMember)*n);
-	setSupportLevel(sLevel);
-	initFunds();	
+	setSupportLevel(sLevel);	
+}
+
+Region::~Region()
+{
+	free(memberList);
 } 
 
 void Region::distributeFunds(int n)
@@ -17,6 +21,23 @@ void Region::distributeFunds(int n)
 
 	while(i<length)
 	{
-		memberList[i].addFunds(amount);;
+		memberList[i].distributeFunds(amount);
+		i++;
 	}
 }
+
+int Region::getFundsReceived() const
+{
+	int length = sizeof(memberList);
+	int i = 0;
+	int amount = 0;
+
+	while(i<length)
+	{
+		amount += memberList[i].getFundsReceived();
+		i++;
+	}
+	
+	return amount;
+}
+

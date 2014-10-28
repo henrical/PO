@@ -5,7 +5,9 @@
 
 class RegionMember : public Beneficiary
 {
-
+	public:
+		void distributeFunds(int n) = 0;
+		int getFundsReceived() const = 0;
 };
 
 #endif
