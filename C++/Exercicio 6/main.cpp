@@ -1,13 +1,4 @@
-#include "agency.h"
-#include "beneficiary.h"
-#include "region.h"
-#include "regionmember.h"
-#include "individual.h"
-#include "town.h"
-
-#include <iostream>
-
-
+//faltam includes
 int main()
 {
 	int i;
