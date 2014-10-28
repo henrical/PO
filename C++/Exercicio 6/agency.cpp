@@ -1,10 +1,12 @@
 #include "agency.h"
+#include <iostream>
 
 Agency::Agency()
 {
 }
 
-Agency::support(Beneficiary &b, int n) const
+void Agency::support(Beneficiary &b, int n) const
 {
-	b.funds += n;
+	b.addFunds(n);
+	std::cout << "-> " << n << " dollars added to beneficiary" << std::endl;
 }

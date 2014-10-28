@@ -3,9 +3,15 @@
 
 class Beneficiary
 {
-	public:
+	private:
 		int supportLevel;
 		int funds;
-		Beneficiary(int sL);
-
+	public:
+		void initFunds();
+		void addFunds(int &n);
+		void setSupportLevel(int n);
+		int getFunds() const;
+		int getSupportLevel() const;
 };
+
+#endif

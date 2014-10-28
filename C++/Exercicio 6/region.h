@@ -1,14 +1,19 @@
 #ifndef _REGION_H_
 #define _REGION_H_
 
-#include <vector>
-
+//#include <vector>
+#include "beneficiary.h"
+#include "regionmember.h"
 
 class Region : public Beneficiary
 {
 	private:
-		RegionMember *memberList;
+		
 	public:
-		explicit Region();
-		void distributeFunds() const;
+		RegionMember *memberList;
+
+		explicit Region(int n, int sLevel);
+		void distributeFunds(int n);
 };
+
+#endif
