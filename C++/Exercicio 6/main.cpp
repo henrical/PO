@@ -1,4 +1,10 @@
-//faltam includes
+#include "agency.h"
+#include "beneficiary.h"
+#include "region.h"
+#include "regionmember.h"
+#include "individual.h"
+#include "town.h"
+#include <iostream>
 int main()
 {
 	int i;
@@ -20,11 +26,12 @@ int main()
 	a.support(r, 6);	
 
 	std::cout << "-> Region has " << r.getFundsReceived() << " dollars." << std::endl;
-	
-	for(i=0 ; i<sizeof(r.memberList); i++)
+	/*
+	for(i=0 ; i<sizeof(r.memberList) - 1; i++)
 	{
 		std::cout << "-> Member number " << i+1 << " of region has " << r.memberList[i].getFundsReceived() << " dollars." << std::endl;
-	}	
+	}
+	*/	
 
 	return 0;
 }

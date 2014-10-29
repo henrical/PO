@@ -3,7 +3,8 @@
 
 Region::Region(int n, int sLevel)
 {
-	memberList = (RegionMember*) malloc(sizeof(RegionMember)*n);
+	memberList = new RegionMember[n];
+	/*memberList = (RegionMember*) malloc(sizeof(RegionMember)*n);*/
 	setSupportLevel(sLevel);	
 }
 
@@ -14,7 +15,7 @@ Region::~Region()
 
 void Region::distributeFunds(int n)
 {
-	int length = sizeof(memberList);
+	int length = sizeof(memberList) - 1;
 	int i = 0;
 
 	int amount = n / length;
@@ -28,7 +29,7 @@ void Region::distributeFunds(int n)
 
 int Region::getFundsReceived() const
 {
-	int length = sizeof(memberList);
+	int length = sizeof(memberList) - 1;
 	int i = 0;
 	int amount = 0;
 
@@ -40,4 +41,5 @@ int Region::getFundsReceived() const
 	
 	return amount;
 }
+
 

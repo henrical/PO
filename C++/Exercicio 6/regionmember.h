@@ -6,8 +6,8 @@
 class RegionMember : public Beneficiary
 {
 	public:
-		void distributeFunds(int n) = 0;
-		int getFundsReceived() const = 0;
+		virtual void distributeFunds(int n);
+		virtual int getFundsReceived() const ;
 };
 
 #endif

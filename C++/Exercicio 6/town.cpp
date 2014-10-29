@@ -18,7 +18,7 @@ Town::~Town()
 
 void Town::distributeFunds(int n)
 {
-	int length = sizeof(memberList);
+	int length = sizeof(memberList) - 1;
 	int i = 0;
 
 	int amount = n / length;
@@ -31,7 +31,7 @@ void Town::distributeFunds(int n)
 
 int Town::getFundsReceived() const
 {
-	int length = sizeof(memberList);
+	int length = sizeof(memberList)-1;
 	int i = 0;
 	int amount = 0;
 
