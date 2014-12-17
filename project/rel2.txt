@@ -1,0 +1,21 @@
+==================================================================================================================
+Relatório Entrega Final
+==================================================================================================================
+Henrique Caldeira 75838	
+Hugo Afilhado 73522
+==================================================================================================================
+
+Na classe SessionManager:
+
+O método doImport é ultilizado quando a opção "-Dimport" esta definida para inicializar um sistema de ficheiros a 
+partir de um ficheiro de texto. Ela lê o conteúdo linha a linha e cria objectos baseado no seu conteúdo. 
+Uma das limitações do nosso código é que isto poderia ser feito usando uma fabrica de objectos pela informaçao 
+destes em tempo de execução (meta programação), o que tornaria o codigo mais eficiente.
+
+O método readObjectsFrom faz uso da serialização do Java para ler um ficheiro binário usando um FileInputStream e 
+transforma os dados contidos nesse ficheiro em objectos do sistema de ficheiros usando um ObjectInputStream. 
+O método writeObjects faz uso do mesmo mecanismo(usando outras classes do Java) para escrever o estado do sistema 
+de ficheiros para um ficheiro binário.
+
+
+

@@ -1,0 +1,84 @@
+==================================================================================================================
+Relatório Entrega Intermédia
+==================================================================================================================
+Henrique Caldeira ist175838	
+Hugo Afilhado 173522
+==================================================================================================================
+
+___________________________________________________________________________________________________________________________________________________________________________________
+Classe FileSystemEntity:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Contém a funcionalidade comum ás classes File e Directory, os atributos mode(publico=true ou privado=false), name e owner. Os três métodos abstractos obrigam as subclasses a implementar  
+funcionalidades que sao comuns mas que se aplicam de forma diferente ás duas subclasses.
+
+Apesar de ser uma classe abstracta, contém dois constructores que vao ser usados pelas subclasses para inicializar os atributos em comum.
+
+A classe implementa a interface Serializable para que as suas subclasses possam ser serializadas pelo Java. Não basta serem as subclasses a implementar esta interface, porque os objectos 
+guardados nas nossas estruturas de dados como FileSystemEntity(s), e as subclasses não contêm toda a informaçao que pretendemos serializar.
+
+Todos os métodos sao protected, pois só o SessionManager vai aceder a eles, e todos os atributos são private, porque so vão ser acedidos por métodos da classe.
+
+___________________________________________________________________________________________________________________________________________________________________________________
+Class File:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Classe muito "straight-forward".
+É Serializable para que os seus objectos possam ser lidos e escritos num ficheiro binário.
+O método getAttributes() formata os atributos numa linha como pedida para o comando Listar Entrada.
+
+Todos os métodos sao protected, pois só o SessionManager vai aceder a eles, e todos os atributos são private, porque so vão ser acedidos por métodos da classe.
+
+____________________________________________________________________________________________________________________________________________________________________________________
+Classe Directory:
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+É Serializable para que os seus objectos possam ser lidos e escritos num ficheiro binário.
+
+Guarda como atributos um referência para o directório-pai e um Map do Java, que tem como chave uma string, o nome da entrada, e um valor, a referência para a dita entrada.
+
+O Map guarda valores do tipo FileSystemEntity, mas na realidade são do tipo de uma das duas subclasses, pois a classe FileSystemEntity é abstracta e não pode  ser instanciada.
+
+A funçao  listMe() imprime os atributos do proprio directorio(.) e de directório-pai (..). Depois percorre as entidades que estao dentro do directório e imprime os seu atributos um por 
+um, através dos métodos que File e Directory têm em comum, mas que actuam de forma diferente para cada tipo de objecto.
+
+A função getPath() adiciona "/name" (name é o nome da entrada) e depois vai recursivamente adicionar os caminhos dos parents ao inicio da string ate chegar ao root.
+
+Todos os métodos sao protected, pois só o SessionManager vai aceder a eles, e todos os atributos são private, porque so vão ser acedidos por métodos da classe.
+
+
+_____________________________________________________________________________________________________________________________________________________________________________________
+Classe FileSystem:
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+É Serializable para que os seus objectos possam ser lidos e escritos num ficheiro binário.
+
+Tem como atributos uma referência para o directorio raiz do FileSystem, e um Map que guarda Users, indexados pelo seu nome.
+
+O directório raiz é sempre é logo definido com a criaçao de um objecto da classe.
+O constructor incializa logo um directorio "/home" dentro do desse directório raiz, assim como um User de username "root".
+
+A função  createDirectory(String path, String name, String owner, String mode) parsa o "path" dado e vai percorrendo o sistema de ficheiros(de cima para baixo) com base nos nomes 
+que estão no "path". Se esses directorios nao existirem, sao primeiro criados e depois percorridos.
+
+Todos os métodos sao protected, pois só o SessionManager vai aceder a eles, e todos os atributos são private, porque so vão ser acedidos por métodos da classe.
+
+
+______________________________________________________________________________________________________________________________________________________________________________________
+Classe SessionManager:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Classe de interacçao com os comandos e que faz as verificaçoes para o lançamento de excepções.
+
+É Serializable para que os seus objectos possam ser lidos e escritos num ficheiro binário.
+
+Tem como atributos uma referencia para um User,  uma referencia para o unico FileSystem, e uma referencia para um directorio actual, que e "transient" porque nao o queremos serializar.
+
+
+
+
+
+
+
+
+
+
+Nota: Nas classes textui, nao "apanhamos" excepçoes do core que se tratam com excepçoes do poof-support. Fizemos isso no Login, mas nas outras apenas declaramos as expecçoẽs por 
+falta de tempo. Lei de Murphy strikes again.
+
+
