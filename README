@@ -1,0 +1,25 @@
+To install and run project:
+
+Compile and install the abstract user interface library:
+cd project
+cd po-uilib
+make
+sudo make install
+
+Compile and install the support strings library:
+cd ../poof-support
+make
+sudo make install
+
+Compile and install the core library:
+cd ../poof-core
+make
+sudo make install
+
+Compile and install the user interface library:
+cd ../poof-textui
+make
+sudo make install
+
+Run:
+java -cp /usr/share/java/po-uilib.jar:/usr/share/java/poof-support.jar:/usr/share/java/poof-core.jar:/usr/share/java/poof-textui.jar poof.textui.Shell
